@@ -8,11 +8,12 @@ const AboutMe = () => {
       <Grid
         item
         xs={12}
-        md={6}
+        md={5}
         sx={{
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
+          flexDirection: "row",
         }}
       >
         <Box
@@ -20,6 +21,7 @@ const AboutMe = () => {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
+            flexDirection: "row",
             fontWeight: {
               xs: 300, // theme.breakpoints.up('xs')
               sm: 400, // theme.breakpoints.up('sm')
@@ -47,7 +49,7 @@ const AboutMe = () => {
       <Grid
         item
         xs={12}
-        md={6}
+        md={7}
         pb={10}
         sx={{
           display: "flex",

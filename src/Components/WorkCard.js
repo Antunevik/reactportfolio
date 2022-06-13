@@ -35,8 +35,12 @@ const WorkCard = ({ image, title, chip, body, cta1, cta2 }) => {
           </Typography>
           <Typography>{body}</Typography>
           <Stack direction={"row"} spacing={2}>
-            <Button>Preview</Button>
-            <Button>Github Repo</Button>
+            <Button href={cta1} target="_blank">
+              Preview
+            </Button>
+            <Button href={cta2} target="_blank">
+              Github Repo
+            </Button>
           </Stack>
         </Grid>
       </Grid>
