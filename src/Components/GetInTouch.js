@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
-import { Grid, Typography, Button, TextareaAutosize } from "@mui/material";
+import { Grid, Button, TextField, Typography, Box } from "@mui/material";
 
 const GetInTouch = () => {
   const form = useRef();
@@ -26,17 +26,84 @@ const GetInTouch = () => {
   };
 
   return (
-    <Grid container>
-      <form ref={form} onSubmit={sendEmail}>
-        <label>Name</label>
-        <input type="text" name="user_name" />
-        <label>Email</label>
-        <input type="email" name="user_email" />
-        <label>Message</label>
-        <textarea name="message" />
-        <input type="submit" value="Send" />
-      </form>
-    </Grid>
+    <>
+      <Box
+        container
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          flexDirection: "column",
+          marginTop: "100px",
+        }}
+      >
+        <Typography variant="h4">Like what you see?</Typography>
+
+        <Grid
+          container
+          p={5}
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            flexDirection: { xs: "column-reverse", md: "row" },
+          }}
+        >
+          <Grid
+            item
+            xs={12}
+            md={4}
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              flexDirection: "column",
+            }}
+          >
+            <form ref={form} onSubmit={sendEmail}>
+              <TextField
+                id="outlined-textarea"
+                label="Name"
+                placeholder="Name"
+                multiline
+                type="text"
+                name="user_name"
+                helperText="Please enter your name"
+              />
+
+              <TextField
+                id="outlined-textarea"
+                label="Email"
+                placeholder="Email"
+                multiline
+                type="email"
+                name="user_email"
+                helperText="Please enter your Email"
+              />
+              <TextField
+                id="outlined-multiline-static"
+                label="Message"
+                multiline
+                rows={4}
+                defaultValue=""
+                name="message"
+              />
+
+              <Button variant="outlined" type="submit" value="Send">
+                Send
+              </Button>
+            </form>
+          </Grid>
+          <Grid item md={6}>
+            <Typography>
+              As of now I'm currently looking for a position as a frontend
+              developer. If you're a recruiter and like what you see, feel free
+              to connect with me either via LinkedIn or use this form.
+            </Typography>
+          </Grid>
+        </Grid>
+      </Box>
+    </>
   );
 };
 

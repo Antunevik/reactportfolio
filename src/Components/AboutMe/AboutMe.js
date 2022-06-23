@@ -61,8 +61,7 @@ const AboutMe = () => {
           src={Isak}
           alt="img"
           style={{
-            height: 400,
-            width: 270,
+            width: "85%",
             borderRadius: 50,
           }}
         />

@@ -16,7 +16,7 @@ const LandingPage = () => {
         >
           <Box>
             <Typography variant="h3">Hi, my name is</Typography>
-            <Typography variant="h2">Isak Antunevik</Typography>{" "}
+            <Typography variant="h2">Isak Antunevik</Typography>
             <Typography variant="h5">
               I'm a Junior Frontend Developer.
             </Typography>

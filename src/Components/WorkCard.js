@@ -1,5 +1,13 @@
 import React from "react";
-import { Divider, Typography, Grid, Stack, Button, Chip } from "@mui/material";
+import {
+  Divider,
+  Typography,
+  Grid,
+  Stack,
+  Button,
+  Chip,
+  Box,
+} from "@mui/material";
 
 const WorkCard = ({ image, title, chip, body, cta1, cta2 }) => {
   console.log({ image, title, chip, body, cta1, cta2 });
@@ -30,9 +38,17 @@ const WorkCard = ({ image, title, chip, body, cta1, cta2 }) => {
             flexDirection: "column",
           }}
         >
-          <Typography>
-            {title} <Chip label={chip} />{" "}
-          </Typography>
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <Typography sx={{ marginRight: "20px" }}>{title}</Typography>
+            <Chip label={chip} />
+          </Box>
+
           <Typography>{body}</Typography>
           <Stack direction={"row"} spacing={2}>
             <Button href={cta1} target="_blank">

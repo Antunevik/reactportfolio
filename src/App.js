@@ -1,15 +1,14 @@
 import "./App.css";
-import { Container, Button, Grid } from "@mui/material";
-import Navbar from "./Components/Navbar";
+import { Container, Grid } from "@mui/material";
 import AboutMe from "./Components/AboutMe/AboutMe.js";
 import GetInTouch from "./Components/GetInTouch";
 import LandingPage from "./Components/LandingPage";
 import MyWork from "./Components/MyWork";
+import Footer from "./Components/Footer";
 
 function App() {
   return (
     <div className="App">
-      <Navbar />
       <Container
         maxWidth="md"
         sx={{
@@ -17,6 +16,8 @@ function App() {
           justifyContent: "center",
           alignItems: "center",
           flexDirection: "column",
+          color: "text.primary",
+          bgcolor: "background.default",
         }}
       >
         <Grid container>
@@ -26,7 +27,7 @@ function App() {
         <MyWork />
 
         <GetInTouch />
-        <Button variant="contained">Click ME</Button>
+        <Footer />
       </Container>
     </div>
   );
